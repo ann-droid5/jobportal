@@ -3,8 +3,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../assets/logo.png";
+import { useNavigate } from "react-router-dom";
 
 function Navbar({ role, setRole }) {
+  const navigate = useNavigate();
+
   return (
     <nav className="navbar navbar-expand-lg custom-navbar">
       <div className="container-fluid">
@@ -43,10 +46,18 @@ function Navbar({ role, setRole }) {
 
             {/* Admin Links */}
             {role === "admin" && (
+              <>
               <li className="nav-item">
                 <Link className="nav-link" to="/admin">Admin</Link>
               </li>
+              <li><Link className="nav-link" to="/admin/users">Manage Users</Link></li>
+              <li><Link className="nav-link" to="/admin/jobs">Manage Jobs</Link></li>
+              <li><Link className="nav-link" to="/admin/reports">Reports</Link></li>
+              
+              </>
+              
             )}
+            
             <li className="nav-item dropdown">
             <Link className="nav-link dropdown-toggle" to="/courses" role="button" data-bs-toggle="dropdown" aria-expanded="false">Courses</Link>
             <ul className="dropdown-menu">
@@ -62,12 +73,19 @@ function Navbar({ role, setRole }) {
          
           <div className="nav-cta-container">
             <form className="search-form" role="search">
-              <span className="search-icon"><i class="bi bi-search"></i></span>
+              <span className="search-icon"><i className="bi bi-search"></i></span>
               <input className="search-input" type="search" placeholder="Search" aria-label="Search"/>
             </form>
             <div className="header_vertical_partition"></div>
             <button type="button" className="btn login-btn" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
-            <button type="button" className="btn login-btn" data-bs-toggle="modal" data-bs-target="#registerModal">Register</button>
+            <button
+              type="button"
+              className="btn login-btn"
+              onClick={() => navigate("/signup")}
+            >
+              Register
+            </button>
+
             <div className="header_vertical_partition"></div>
             <Link to="/" className="employer-link" data-bs-toggle="modal" data-bs-target="#employerModal">Employer sign up <span><i className="bi bi-chevron-right"></i></span></Link>
 

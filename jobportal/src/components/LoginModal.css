@@ -1,0 +1,101 @@
+.login-modal {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.login-close {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+}
+
+.login-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.login-tabs span {
+  cursor: pointer;
+  padding-bottom: 6px;
+  color: #555;
+}
+
+.login-tabs .active {
+  color: #00a5ec;
+  border-bottom: 2px solid #00a5ec;
+}
+
+.google-login-btn {
+  width: 100%;
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 16px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #ddd;
+}
+
+.divider span {
+  margin: 0 10px;
+  font-size: 13px;
+  color: #777;
+}
+
+label {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.forgot-password {
+  font-size: 13px;
+  color: #00a5ec;
+  text-align: right;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.login-submit-btn {
+  width: 100%;
+  background: #00a5ec;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+}
+
+.login-submit-btn:hover {
+  background: #008ecf;
+}
+
+.register-text {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 14px;
+}
+
+.register-text span {
+  color: #00a5ec;
+  cursor: pointer;
+  font-weight: 500;
+}

@@ -9,8 +9,8 @@ function HomeJobCard({ job }) {
       <p className="company-name">{job.company}</p>
 
       <div className="job-meta">
-        <span><i class="bi bi-geo-alt"></i> {job.location}</span>
-        <span><i class="bi bi-cash-stack"></i> {job.salary}</span>
+        <span><i className="bi bi-geo-alt"></i> {job.location}</span>
+        <span><i className="bi bi-cash-stack"></i> {job.salary}</span>
       </div>
 
       <div className="job-card-footer">

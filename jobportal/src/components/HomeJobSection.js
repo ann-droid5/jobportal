@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import { Link } from "react-router-dom";
+
 function HomeJobSection() {
   const categories = [
     "All",
@@ -75,12 +77,12 @@ function HomeJobSection() {
                         <span className="badge bg-primary mb-2">Actively hiring</span>
                         <h6 className="fw-semibold mt-2">{job.title}</h6>
                         <p className="text-muted mb-1">{job.company}</p>
-                        <p className="small mb-1"><i class="bi bi-geo-alt"></i> {job.location}</p>
-                        <p className="small"><i class="bi bi-cash-stack"></i> {job.salary}</p>
+                        <p className="small mb-1"><i className="bi bi-geo-alt"></i> {job.location}</p>
+                        <p className="small"><i className="bi bi-cash-stack"></i> {job.salary}</p>
                       </div>
                       <div className="card-footer bg-white border-0 d-flex justify-content-between">
                         <span className="badge bg-light text-dark">Job</span>
-                        <span className="text-primary fw-semibold">View details ›</span>
+                        <Link to={`/jobs/${job.id}`}className="text-primary fw-semibold text-decoration-none">View details ›</Link>
                       </div>
                     </div>
                   </div>
